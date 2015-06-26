@@ -1,9 +1,13 @@
 var express = require('express');
 var app = express();
-
 var port = 3030;
 
 app.use(express.static(__dirname + '/public'));
+
+
+app.get('/info', function(req, res){
+    res.send({data: 'To Be Implemented!'});
+});
 
 app.get('/env', function(req,res){
 	var environment = process.env;
